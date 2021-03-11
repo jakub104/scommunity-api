@@ -30,6 +30,12 @@ app.use('/api/chats', chatsRoute)
 app.get('/', (req, res) => {
 	res.send('About page')
 })
+app.get('/test', (req, res) => {
+	res.json({
+		name: 'Jakub',
+		age: 19
+	})
+})
 
 const server = http.createServer(app)
 const io = socket(server, {
