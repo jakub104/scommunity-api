@@ -95,5 +95,5 @@ io.on('connection', function (socket) {
 
 var PORT = process.env.PORT || 3000;
 server.listen(PORT, function () {
-	return console.log('Server is running on port ' + PORT + '...');
+	return console.log('Server is running on port http://localhost:' + PORT + '...');
 });
