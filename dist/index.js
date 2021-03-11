@@ -73,6 +73,12 @@ app.use('/api/chats', _chats2.default);
 app.get('/', function (req, res) {
 	res.send('About page');
 });
+app.get('/test', function (req, res) {
+	res.json({
+		name: 'Jakub',
+		age: 19
+	});
+});
 
 var server = _http2.default.createServer(app);
 var io = (0, _socket2.default)(server, {
@@ -95,5 +101,5 @@ io.on('connection', function (socket) {
 
 var PORT = process.env.PORT || 3000;
 server.listen(PORT, function () {
-	return console.log('Server is running on port http://localhost:' + PORT + '...');
+	return console.log('Server is running on port ' + PORT + '...');
 });
